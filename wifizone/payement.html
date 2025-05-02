@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte de Paiement</title>
+    <link rel="stylesheet" href="assets/css/style2.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <form class="card-content">
+            <div class="form-title">payement du ticket</div> 
+            <!--div class="select-wrapper">
+                <select class="operator-select" id="operator">
+                    <option value="moov">Moov</option>
+                    <option value="yas">Yas</option>
+                </select>
+                <div class="dropdown-icon">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </!--div-->
+            <label for="phone" class="phone-label">Numéro de téléphone</label>
+            
+            <div class="phone-field">
+                <div class="flag">
+                    <img src="assets/img/moov.webp" alt="image" class="moov-img">
+                    <!--img src="assets/img/yas.svg" alt="image" class="yas-img"-->
+
+                </div>
+                <input type="tel" id="phone" class="phone-input" placeholder="90 12 34 56" maxlength="11" oninput="formatTogoleseNumber(this)">
+                <div class="error-icon" id="errorIcon">
+                  <i class="fas fa-exclamation-circle"></i>
+                </div>
+              </div>
+                          
+            <div class="info-field">
+                <i class="fas fa-info-circle info-icon"></i>
+                <input type="text" class="info-input" value="3 CFA de frais supplémentaires sont appliqués sur votre paiement." readonly>
+            </div>
+            
+            <button type="submit" class="pay-button">
+                <span>PAYER 153 CFA</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </form>
+    </div>
+        <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--  fichier JavaScript -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>

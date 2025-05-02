@@ -1,0 +1,226 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Carte principale */
+.card {
+    width: 100%;
+    max-width: 400px;
+    background-color: #0a4d1c; /* Vert foncé */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Titre du formulaire */
+.form-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Select d'opérateur */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+    
+}
+
+.operator-select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgb(155, 187, 155);
+    color: white;
+    border: 1px solid #4CAF50; /* Vert clair */
+    border-radius: 5px;
+    appearance: none; /* Supprime l'apparence par défaut du select */
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: #4CAF50; /* Vert clair */
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    pointer-events: none; /* Pour que les clics passent à travers */
+}
+
+/* Label du numéro de téléphone */
+.phone-label {
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Champ numéro de téléphone */
+.phone-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #4CAF50; /* Vert clair */
+    border-radius: 5px;
+    overflow: hidden;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.flag {
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.flag img {
+    width: 24px;
+    height: auto;
+}
+
+.phone-input {
+    flex: 1;
+    height: 100%;
+    padding: 0 15px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.phone-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.error-icon {
+    padding: 0 15px;
+    color: #ff5252;
+}
+
+/* Champ d'information */
+.info-field {
+    display: flex;
+    align-items: center;
+    background-color: rgba(76, 175, 80, 0.2); /* Vert clair semi-transparent */
+    border-radius: 5px;
+    padding: 0 15px;
+    height: 45px;
+}
+
+.info-icon {
+    color: #4CAF50; /* Vert clair */
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.info-input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 13px;
+    outline: none;
+    cursor: default;
+}
+
+/* Bouton de paiement */
+.pay-button {
+    background-color: #2e7d32; /* Vert foncé */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Focus styles */
+.operator-select:focus,
+.phone-input:focus {
+    border-color: #8BC34A;
+    box-shadow: 0 0 0 1px #8BC34A;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card-content {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .form-title, .phone-label {
+        font-size: 14px;
+    }
+    
+    .operator-select, .phone-field, .info-field, .pay-button {
+        padding: 10px 12px;
+        height: 42px;
+    }
+    
+    .info-input {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .card-content {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .phone-input, .info-input {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width: 450px;
+    }
+    
+    .card-content {
+        padding: 25px;
+        gap: 18px;
+    }
+    
+    .form-title {
+        font-size: 18px;
+    }
+    
+    .operator-select, .phone-field, .info-field {
+        height: 48px;
+    }
+}
